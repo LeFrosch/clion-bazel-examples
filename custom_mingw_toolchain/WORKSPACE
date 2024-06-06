@@ -1,0 +1,7 @@
+workspace(name = "toolchains_mingw")
+
+load("//toolchain:rules.bzl", "mingw_toolchain")
+
+mingw_toolchain(name = "mingw_toolchain")
+
+register_toolchains("@mingw_toolchain//:mingw_x86_toolchain")

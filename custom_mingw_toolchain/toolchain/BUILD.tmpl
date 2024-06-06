@@ -1,0 +1,41 @@
+load("@toolchains_mingw//toolchain:config.bzl", "toolchain_config")
+
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "all",
+    srcs = glob([
+        "x86_64-w64-mingw32/**",
+        "bin/**",
+        "lib/**",
+        "include/**",
+    ]),
+)
+
+cc_toolchain(
+    name = "cc_mingw_x86_toolchain",
+    toolchain_identifier = "mingw_x86",
+    toolchain_config = ":mingw_x86_config",
+    all_files = ":all",
+    compiler_files = ":all",
+    dwp_files = ":all",
+    linker_files = ":all",
+    objcopy_files = ":all",
+    strip_files = ":all",
+    supports_param_files = 0,
+)
+
+toolchain(
+    name = "mingw_x86_toolchain",
+    toolchain = ":cc_mingw_x86_toolchain",
+    toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
+    target_compatible_with = [
+        "@platforms//cpu:x86_64",
+        "@platforms//os:windows",
+    ],
+)
+
+toolchain_config(
+    name = "mingw_x86_config",
+    sysroot = "%{sysroot}",
+)
