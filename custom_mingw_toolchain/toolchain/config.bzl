@@ -54,6 +54,7 @@ def _impl(ctx):
                         flag_group(
                             flags = [
                                 "-lstdc++",
+				                "-static",
                             ],
                         ),
                     ]),
