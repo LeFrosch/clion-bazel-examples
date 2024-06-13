@@ -1,9 +1,9 @@
-# configure zig cach dirs
+# configure zig cache dirs
 build:linux --sandbox_add_mount_pair=/tmp
 build:macos --sandbox_add_mount_pair=/var/tmp
 build:windows --sandbox_add_mount_pair=C:\Temp
 
-# for bazel 6 and erlier 
+# for bazel 6 and earlier
 # build --incompatible_enable_cc_toolchain_resolution 
 
 # create configurations to enable --config
