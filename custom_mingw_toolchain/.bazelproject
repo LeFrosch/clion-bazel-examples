@@ -3,3 +3,7 @@ directories:
 
 targets:
   //src:hello_world
+
+build_flags:
+  # to cross compile to windows, sets --platforms to //platform:windows
+  --config=windows

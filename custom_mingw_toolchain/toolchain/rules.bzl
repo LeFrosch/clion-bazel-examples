@@ -23,7 +23,7 @@ def _mingw_archive_extension(rctx):
     if rctx.os.name.startswith("windows"):
         return "zip"
     else:
-        return "tar.gz"
+        return "tar.xz"
 
 def _mingw_repo_impl(rctx):
     version = rctx.attr.mingw_version
