@@ -1,9 +1,8 @@
 #include <iostream>
 #include <windows.h>
-#include <Lmcons.h>
 
 int main() {
-    DWORD username_len = UNLEN+1;
+    DWORD username_len = 64;
     char username[username_len];
 
     GetUserName(username, &username_len);

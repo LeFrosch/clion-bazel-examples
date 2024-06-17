@@ -6,5 +6,5 @@ This is a custom LLVM mingw toolchain for bazel. The toolchain can automatically
 
 To crosscompile to windows specify windows as the target platform:
 ```
---platforms //toolchain:windows
+--platforms //platform:windows
 ```
