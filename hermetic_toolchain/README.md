@@ -7,6 +7,8 @@ This is Ubers C/C++ toolchain that can (cross-)compile C/C++ programs on top of 
 * Linux amd64: `--config=linux_amd64`
 * Darwin arm64: `--config=darwin_arm64`
 * Darwin amd64: `--config=darwin_amd64`
+* Windows arm64: `--config=windows_arm64`
+* Windows amd64: `--config=windows_amd64`
 
 This flag can be set in the `build_flags` section of the project view file. For example:
 ```yaml

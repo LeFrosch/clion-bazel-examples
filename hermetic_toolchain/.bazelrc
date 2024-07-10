@@ -15,3 +15,7 @@ build:darwin_arm64 --platforms @zig_sdk//platform:darwin_arm64
 build:darwin_arm64 --extra_toolchains @zig_sdk//toolchain:darwin_arm64
 build:darwin_amd64 --platforms @zig_sdk//platform:darwin_amd64
 build:darwin_amd64 --extra_toolchains @zig_sdk//toolchain:darwin_amd64
+build:windows_arm64 --platforms @zig_sdk//platform:windows_arm64
+build:windows_arm64 --extra_toolchains @zig_sdk//toolchain:windows_arm64
+build:windows_amd64 --platforms @zig_sdk//platform:windows_amd64
+build:windows_amd64 --extra_toolchains @zig_sdk//toolchain:windows_amd64

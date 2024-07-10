@@ -3,7 +3,3 @@ directories:
 
 targets:
   //src:hello_world
-
-build_flags:
-  # define the target platform here, see .bazelrc for all options
-  --config=darwin_arm64
